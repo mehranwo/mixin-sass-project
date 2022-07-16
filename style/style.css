@@ -1,0 +1,553 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 130px;
+  background-image: url("/asset/bg.png");
+}
+.header .header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header .header__navbar .header__site-name {
+  font-size: 28;
+  font-weight: 600;
+}
+.header .header__navbar .header__categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
+  margin: 0 30px;
+}
+.header .header__navbar .header__categories .header__category {
+  font-size: 14px;
+  cursor: pointer;
+}
+.header .header__navbar .header__categories .header__category:hover {
+  color: #0D6B6A;
+  transform: scale(1.25);
+  font-weight: 500;
+}
+.header .header__navbar .button {
+  border: none;
+}
+.header .header__navbar .button:after {
+  content: "Register/Login";
+  visibility: visible;
+  display: block;
+  border-radius: 2px;
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  background-color: #0D6B6A;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+.header .header__navbar .button:hover {
+  transform: scale(1.05);
+}
+.header .header__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.header .header__section .header__text {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.header .header__section .header__text .header__title {
+  font-size: 80px;
+  font-weight: 700;
+}
+.header .header__section .header__text .header__detail {
+  font-size: 16px;
+  font-weight: 300;
+}
+.header .header__section .header__text .button {
+  border: none;
+}
+.header .header__section .header__text .button:after {
+  content: "TO ORDER →";
+  visibility: visible;
+  display: block;
+  border-radius: 2px;
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  background-color: #0D6B6A;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+.header .header__section .header__text .button:hover {
+  transform: scale(1.05);
+}
+.header .header__section .header__photo {
+  position: relative;
+  flex: 1;
+}
+.header .header__section .header__photo .header__image {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.header .header__section .header__photo .header__badge {
+  margin: 0px 0px -110px -20px;
+  width: 200px;
+  height: 130px;
+  background-color: #0D6B6A;
+  z-index: 9;
+}
+
+.header__o {
+  color: #0D6B6A;
+}
+
+.top-banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 130px;
+  align-items: flex-start;
+  margin-top: 60px;
+  gap: 30px;
+}
+.top-banner .top-banner__title {
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0D6B6A;
+  position: relative;
+}
+.top-banner .top-banner__title:after {
+  display: block;
+  content: "A team United by shared values";
+  margin: -15px 0px 0px 60px;
+  font-size: 30px;
+  font-weight: 600;
+  width: 650px;
+}
+.top-banner .top-banner__team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-banner .top-banner__team .top-banner__detail {
+  background-color: #0D6B6A;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.top-banner .top-banner__team .top-banner__detail .top-banner__number {
+  flex: 2;
+  font-size: 250px;
+  color: white;
+  font-weight: 700;
+}
+.top-banner .top-banner__team .top-banner__detail .top-banner__text {
+  flex: 1;
+  color: white;
+  font-size: 25px;
+  padding: 0 10px;
+  font-weight: 400;
+}
+.top-banner .top-banner__team .top-banner__images {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-banner .top-banner__team .top-banner__images .top-banner__image {
+  position: relative;
+  width: 33.3333333333%;
+}
+.top-banner .top-banner__team .top-banner__images .top-banner__image:hover:after {
+  content: "Sara Cristian";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(13, 107, 106, 0.4901960784);
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 130px;
+  padding-right: 0;
+  margin-top: 80px;
+  gap: 40px;
+}
+.comments .comments__title {
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0D6B6A;
+  position: relative;
+  align-self: flex-start;
+}
+.comments .comments__title:after {
+  display: block;
+  content: "A team United by shared values";
+  margin: -15px 0px 0px 60px;
+  font-size: 30px;
+  font-weight: 600;
+  width: 650px;
+}
+.comments .comments__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.comments .comments__cards .comments__card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4901960784);
+}
+.comments .comments__cards .comments__card .comments__card__specifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.comments .comments__cards .comments__card .comments__card__specifications .comments__card__name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.comments .comments__cards .comments__card .comments__card__specifications .comments__card__career {
+  font-size: 14px;
+  font-weight: 700;
+  font-weight: 400;
+  color: gray;
+}
+.comments .comments__cards .comments__card .comments__card__comment {
+  color: #666666;
+  font-size: 14px;
+}
+.comments .comments__cards .comments__card .comments__card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+}
+.comments .buttons {
+  align-self: flex-start;
+}
+.comments .buttons .button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.comments .buttons .next {
+  background-color: #0D6B6A;
+  color: white;
+}
+
+.work-process {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 130px;
+  background-image: url("/asset/bg.png");
+  padding-top: 60px;
+  margin-top: 100px;
+  gap: 100px;
+  align-items: flex-start;
+}
+.work-process .work-process__title {
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0D6B6A;
+  position: relative;
+}
+.work-process .work-process__title:after {
+  display: block;
+  content: "Our work process make your dream true";
+  margin: -15px 0px 0px 60px;
+  font-size: 30px;
+  font-weight: 600;
+  width: 650px;
+}
+.work-process .work-process__categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 40px;
+  width: 100%;
+}
+.work-process .work-process__categories .work-process__category {
+  display: flex;
+  position: relative;
+}
+.work-process .work-process__categories .work-process__category .work-process__categories__name {
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 10;
+}
+.work-process .work-process__categories .work-process__category .work-process__categories__number {
+  font-size: 50px;
+  font-weight: 700;
+  color: #DDDDDD;
+  z-index: 9;
+  margin-left: -20px;
+}
+.work-process .work-process__detail-packages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-process .work-process__detail-packages .work-process__detail-package {
+  display: flex;
+  padding: 25px;
+  gap: 10px;
+  width: 28.3333333333%;
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__badge {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__badge .work-process__square-shape {
+  width: 15px;
+  height: 15px;
+  flex: 1;
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__badge .work-process__vertical-line {
+  display: flex;
+  align-items: center;
+  flex: 5;
+  margin-top: 5px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.4901960784);
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__content .work-process__detail-package__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.work-process .work-process__detail-packages .work-process__detail-package .work-process__detail-package__content .work-process__detail-package__text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #666666;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.free-consultation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 130px;
+  align-items: flex-end;
+  position: relative;
+}
+.free-consultation .free-consultation__input-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  gap: 100px;
+  z-index: 10;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4901960784);
+  width: 800px;
+  height: 300px;
+  background-color: white;
+  margin-top: 80px;
+}
+.free-consultation .free-consultation__input-card .free-consultation__title {
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0D6B6A;
+  position: relative;
+  align-self: flex-start;
+  margin-left: 30px;
+}
+.free-consultation .free-consultation__input-card .free-consultation__title:after {
+  display: block;
+  content: "Get a free consultation.Just leave a request below";
+  margin: -15px 0px 0px 60px;
+  font-size: 30px;
+  font-weight: 600;
+  width: 650px;
+}
+.free-consultation .free-consultation__input-card .free-consultation__input .input {
+  border: 1px solid #DDDDDD;
+  width: 470px;
+  height: 50px;
+  padding: 0 30px;
+  outline: none;
+}
+.free-consultation .free-consultation__input-card .free-consultation__input .button {
+  border: none;
+  height: 50px;
+  background-color: #0D6B6A;
+}
+.free-consultation .free-consultation__input-card .free-consultation__input .button:after {
+  content: "CallBack →";
+  visibility: visible;
+  display: block;
+  border-radius: 2px;
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  background-color: #0D6B6A;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+.free-consultation .free-consultation__input-card .free-consultation__input .button:hover {
+  transform: scale(1.05);
+}
+.free-consultation .free-consultation__image {
+  width: 750px;
+  height: 500px;
+  margin-top: -600px;
+  z-index: 9;
+}
+
+.footer {
+  background-color: #0D6B6A;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 50px 50px 50px;
+  margin-top: 200px;
+  gap: 30px;
+  color: white;
+  position: relative;
+}
+.footer .footer__line {
+  position: absolute;
+  top: 50px;
+}
+.footer .footer__name-company {
+  font-weight: 600;
+  font-size: 24px;
+}
+.footer .footer__text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #DDDDDD;
+  width: 65%;
+}
+.footer .footer__icons {
+  display: flex;
+  gap: 10px;
+}
+.footer .footer__icons .footer__icon {
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.footer .footer__icons .footer__icon:hover {
+  transform: rotate(360deg);
+}
+.footer .footer__categories {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .footer__contact-us {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.footer .footer__contact-us .footer__conection {
+  display: flex;
+  gap: 15px;
+}
+.footer .footer__contact-us .footer__conection .footer__call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer .footer__contact-us .footer__conection .footer__call .footer__call__icon {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.footer .footer__contact-us .footer__conection .footer__call .footer__call__icon:hover {
+  transform: rotate(360deg);
+}
+.footer .footer__contact-us .footer__conection .footer__call .footer__call__question {
+  color: #DDDDDD;
+  margin-bottom: 5px;
+}
+.footer .footer__contact-us .footer__conection .footer__email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer .footer__contact-us .footer__conection .footer__email .footer__email__icon {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.footer .footer__contact-us .footer__conection .footer__email .footer__email__icon:hover {
+  transform: rotate(360deg);
+}
+.footer .footer__contact-us .footer__conection .footer__email .footer__email__title {
+  margin-bottom: 5px;
+  color: #DDDDDD;
+}
+.footer .footer__contact-us .footer__version {
+  height: 15px;
+}/*# sourceMappingURL=style.css.map */

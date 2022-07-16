@@ -1,0 +1,329 @@
+@import '_mixin'
+@import '_variables'
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+img
+    width: 100%
+    height: 100%
+
+body 
+    width: 100vw
+    height: 100vh
+    margin: 0
+    padding: 0
+    font-family: Montserrat
+    overflow-x: hidden 
+
+.header
+    @include container
+    background-image: url('/asset/bg.png')
+    .header__navbar
+        @include center-row
+        width: 100%
+        .header__site-name
+            font-size: 28
+            font-weight: 600
+        .header__categories
+            @include center-row
+            flex: 1
+            justify-content: space-around
+            margin: 0 30px
+            .header__category
+                font-size: 14px
+                cursor: pointer
+                &:hover
+                    color: $base-color
+                    transform: scale(1.25)
+                    font-weight: 500
+        .button
+            @include button('Register/Login')
+    .header__section
+        @include center-row
+        margin-top: 20px 
+        .header__text
+            flex: 2
+            @include center-col
+            align-items: flex-start
+            gap: 20px
+            .header__title
+                font-size:80px
+                font-weight:700
+            .header__detail
+                font-size: 16px
+                font-weight: 300
+            .button
+                @include button('TO ORDER →')
+        .header__photo
+            position: relative
+            flex: 1
+            .header__image
+                width: 100%
+                height: 100%
+                z-index: 10
+            .header__badge
+                margin: 0px 0px -110px -20px
+                width: 200px
+                height: 130px
+                background-color: $base-color
+                z-index: 9
+.header__o 
+        color: $base-color
+
+.top-banner
+    @include container
+    align-items: flex-start
+    margin-top: 60px 
+    gap: 30px
+    .top-banner__title
+        @include title-text('A team United by shared values')
+    .top-banner__team
+        @include center-row
+        .top-banner__detail
+            background-color: $base-color
+            height: 500px
+            @include center-col
+            flex: 1
+            .top-banner__number
+                flex:2
+                font-size: 250px
+                color: white
+                font-weight: 700
+            .top-banner__text
+                flex: 1
+                color: white
+                font-size:25px
+                padding: 0 10px
+                font-weight: 400  
+        .top-banner__images
+            position: relative
+            flex: 2
+            display: flex
+            flex-wrap: wrap
+            .top-banner__image
+                position: relative
+                @include hover-img('Sara Cristian')
+                width: calc(100% / 3)
+
+.comments
+    @include container
+    padding-right : 0
+    margin-top: 80px
+    gap: 40px
+    .comments__title
+        @include title-text('Thanks for your sweet words to us')
+        align-self: flex-start
+    .comments__cards
+        @include center-row
+        gap: 30px
+        .comments__card
+            @include center-col
+            padding: 20px
+            gap: 15px
+            box-shadow: 0px 0px 3px $black-light
+            .comments__card__specifications
+                @include center-row
+                gap: 10px
+                .comments__card__name
+                    font-size: 16px
+                    font-weight: 700
+                .comments__card__career
+                    font-size: 14px
+                    font-weight: 700
+                    font-weight: 400
+                    color: gray
+            .comments__card__comment
+                color: #666666
+                font-size: 14px
+            .comments__card__stars
+                @include center-row
+                align-self: flex-start   
+
+    .buttons
+        align-self: flex-start
+        .button
+            border: none
+            padding: 10px
+            cursor: pointer
+        .next
+            background-color: $base-color
+            color: white
+
+.work-process
+    @include container
+    background-image: url('/asset/bg.png')
+    padding-top: 60px
+    margin-top: 100px
+    gap: 100px
+    align-items: flex-start
+    .work-process__title
+        @include title-text('Our work process make your dream true')
+    .work-process__categories
+        @include center-row
+        justify-content: space-around
+        border-bottom: 2px solid rgba(0,0 ,0 ,0.1 )
+        padding-bottom: 40px
+        width: 100%    
+        .work-process__category
+            display: flex
+            position: relative
+            .work-process__categories__name
+                font-size: 20px
+                font-weight: 700
+                z-index: 10
+            .work-process__categories__number
+                font-size: 50px
+                font-weight: 700
+                color: #DDDDDD
+                z-index: 9
+                margin-left: -20px 
+
+    .work-process__detail-packages
+        display: flex
+        flex-wrap: wrap
+        .work-process__detail-package
+            display: flex
+            padding: 25px
+            gap: 10px
+            width: calc( 85% / 3  )
+            .work-process__detail-package__badge
+                @include center-col
+                .work-process__square-shape
+                    width: 15px
+                    height: 15px
+                    flex: 1
+                .work-process__vertical-line
+                    display: flex
+                    align-items: center
+                    flex: 5
+                    margin-top: 5px 
+                    width: 2px
+                    background-color: $black-light
+
+            .work-process__detail-package__content
+                @include center-col
+                align-items: flex-start
+                gap: 10px
+                .work-process__detail-package__title
+                    font-size: 16px
+                    font-weight: 700
+                .work-process__detail-package__text
+                    @include center-col
+                    align-items: flex-start
+                    gap: 20px
+                    color: #666666
+                    font-weight: 500
+                    font-size: 14px
+
+.free-consultation
+    @include container
+    align-items: flex-end
+    position: relative
+    .free-consultation__input-card
+        @include center-col
+        align-self: flex-start
+        justify-content: center
+        gap: 100px
+        z-index: 10
+        box-shadow: 0px 0px 3px $black-light
+        width: 800px
+        height: 300px
+        background-color: white
+        margin-top: 80px 
+        .free-consultation__title
+            @include title-text('Get a free consultation.Just leave a request below')
+            align-self: flex-start
+            margin-left: 30px
+        .free-consultation__input
+            .input
+                border: 1px solid #DDDDDD
+                width: 470px
+                height: 50px
+                padding: 0 30px
+                outline: none
+            .button
+                @include button('CallBack →')
+                height: 50px
+                background-color: $base-color
+
+    .free-consultation__image
+        width: 750px
+        height: 500px
+        margin-top: -600px
+        z-index: 9 
+
+.footer
+    background-color: $base-color
+    @include center-col
+    padding: 100px 50px 50px 50px
+    margin-top:200px
+    gap: 30px
+    color: white
+    position: relative
+    .footer__line
+        position: absolute
+        top: 50px
+    .footer__name-company
+        font-weight: 600
+        font-size: 24px
+    .footer__text
+        font-weight: 400
+        font-size: 16px
+        color: #DDDDDD
+        width: 65%
+    .footer__icons
+        display: flex
+        gap: 10px
+        .footer__icon
+            background-color: $white-light
+            padding: 10px
+            border-radius: 50%
+            transition: all 0.5s
+            &:hover
+                transform: rotate(360deg)
+    .footer__categories
+        width: 100%
+        display: flex
+        justify-content: space-around
+    
+    .footer__contact-us
+        display: flex
+        width: 100%
+        justify-content: space-around
+        .footer__conection
+            display: flex
+            gap: 15px
+            .footer__call
+                display: flex
+                align-items: center
+                gap: 10px
+                .footer__call__icon
+                    width: 25px
+                    height: 25px
+                    background-color: $white-light
+                    padding: 10px
+                    border-radius: 50%
+                    transition: all 0.5s
+                    &:hover
+                        transform: rotate(360deg)
+                .footer__call__question
+                    color: #DDDDDD
+                    margin-bottom:5px 
+            .footer__email
+                display: flex
+                align-items: center
+                gap: 10px
+                .footer__email__icon
+                    width: 25px
+                    height: 25px
+                    background-color: $white-light
+                    padding: 10px
+                    border-radius: 50%
+                    transition: all 0.5s
+                    &:hover
+                        transform: rotate(360deg)
+
+                .footer__email__title
+                    margin-bottom:5px 
+                    color: #DDDDDD
+        .footer__version
+            height: 15px
